@@ -15,9 +15,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-/*
- * Authors:
- * - aeon_flux <aeon_flux@eclipso.ch>
+/**
+ * @author aeon_flux aeon_flux@eclipso.ch
  */
 open module jrosrviztools.tests {
     requires id.xfunction;

@@ -41,6 +41,7 @@ import pinorobotics.jrosactionlib.msgs.ActionGoalMessage;
  * @see <a href="http://wiki.ros.org/actionlib/DetailedDescription">Actionlib</a>
  * @param <G> message type used to represent a goal
  * @param <R> message type sent by ActionServer upon goal completion
+ * @author aeon_flux aeon_flux@eclipso.ch
  */
 public class JRos1ActionClient<G extends Message, R extends Message>
         extends AbstractJRosActionClient<GoalIdMessage, G, R> {

@@ -34,6 +34,9 @@ import pinorobotics.jros1actionlib.tests.actionlib_tutorials_msgs.FibonacciGoalM
 import pinorobotics.jros1actionlib.tests.actionlib_tutorials_msgs.FibonacciResultMessage;
 import pinorobotics.jrosactionlib.JRosActionClient;
 
+/**
+ * @author aeon_flux aeon_flux@eclipso.ch
+ */
 public class JRos1ActionClientIntegrationTests {
 
     private static final ResourceUtils resourceUtils = new ResourceUtils();

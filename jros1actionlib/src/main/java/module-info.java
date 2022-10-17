@@ -15,16 +15,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-/*
- * Authors:
- * - aeon_flux <aeon_flux@eclipso.ch>
- */
 /**
  * Java module which allows to interact with <a href="http://wiki.ros.org/actionlib/">ROS1 (Robot
  * Operating System) Action Server</a>.
  *
  * @see <a href="https://github.com/pinorobotics/jros1actionlib/releases">Download</a>
  * @see <a href="https://github.com/pinorobotics/jros1actionlib">GitHub repository</a>
+ * @author aeon_flux aeon_flux@eclipso.ch
  */
 module jros1actionlib {
     requires transitive jrosactionlib;

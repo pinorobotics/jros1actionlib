@@ -2,5 +2,7 @@
 **/.catkin_tools
 **/devel
 **/logs
+**/log
+**/install
 .catkin_workspace
 src/CMakeLists.txt
