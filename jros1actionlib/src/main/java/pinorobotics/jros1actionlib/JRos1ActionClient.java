@@ -112,8 +112,7 @@ public class JRos1ActionClient<G extends Message, R extends Message>
     }
 
     @Override
-    protected CompletableFuture<Action1ResultMessage<R>> callGetResult(GoalIdMessage goalId)
-            throws Exception {
+    protected CompletableFuture<Action1ResultMessage<R>> callGetResult(GoalIdMessage goalId) {
         var future = new CompletableFuture<Action1ResultMessage<R>>();
         pendingGoals.put(goalId, future);
         return future;

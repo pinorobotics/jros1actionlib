@@ -25,6 +25,14 @@ import pinorobotics.jrosactionlib.msgs.ActionResultMessage;
  */
 public interface Action1ResultMessage<R extends Message> extends ActionResultMessage<R> {
 
+    GoalStatusMessage getGoalStatus();
+
     /** In ROS1 each result contains goal_id to which it belongs */
-    GoalIdMessage getGoalId();
+    default GoalIdMessage getGoalId() {
+        return getGoalStatus().goal_id;
+    }
+
+    default StatusType getStatus() {
+        return StatusType.values()[getGoalStatus().status];
+    }
 }

@@ -19,6 +19,8 @@
  * Java module which allows to interact with <a href="http://wiki.ros.org/actionlib/">ROS1 (Robot
  * Operating System) Action Server</a>.
  *
+ * <p>For usage examples see <a href="http://pinoweb.freetzi.com/jrosactionlib">Documentation</a>
+ *
  * @see <a href="https://github.com/pinorobotics/jros1actionlib/releases">Download</a>
  * @see <a href="https://github.com/pinorobotics/jros1actionlib">GitHub repository</a>
  * @author aeon_flux aeon_flux@eclipso.ch

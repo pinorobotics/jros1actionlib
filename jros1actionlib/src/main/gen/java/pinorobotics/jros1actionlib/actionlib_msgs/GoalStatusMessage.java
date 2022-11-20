@@ -22,7 +22,6 @@ import id.jrosmessages.MessageMetadata;
 import id.jrosmessages.std_msgs.StringMessage;
 import id.xfunction.XJson;
 import java.util.Objects;
-import pinorobotics.jrosactionlib.actionlib_msgs.StatusType;
 
 /** Definition for actionlib_msgs/GoalStatus */
 @MessageMetadata(name = GoalStatusMessage.NAME, md5sum = "b6758985eced8e08e99ce12a55072791")
