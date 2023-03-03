@@ -23,9 +23,12 @@ import id.jros1client.JRos1Client;
 import id.jros1client.JRos1ClientFactory;
 import id.jrosmessages.std_msgs.Int32Message;
 import id.xfunction.ResourceUtils;
+import id.xfunction.lang.XExec;
+import id.xfunction.lang.XProcess;
 import id.xfunction.logging.XLogger;
 import java.net.MalformedURLException;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pinorobotics.jros1actionlib.JRos1ActionClientFactory;
@@ -43,10 +46,18 @@ public class JRos1ActionClientIntegrationTests {
     private static JRos1Client client;
     private static JRos1ActionClientFactory factory = new JRos1ActionClientFactory();
     private JRosActionClient<FibonacciGoalMessage, FibonacciResultMessage> actionClient;
+    private XProcess actionServer;
+
+    @BeforeAll
+    public static void setupAll() {
+        XLogger.load("logging-test.properties");
+    }
 
     @BeforeEach
     public void setup() throws MalformedURLException {
-        XLogger.load("logging-test.properties");
+        var exec = new XExec("ws/devel/lib/test_server/test_server_node");
+        exec.getProcessBuilder().inheritIO();
+        actionServer = exec.start().forwardOutputAsync();
         client = new JRos1ClientFactory().createClient("http://localhost:11311/");
         actionClient = factory.createClient(client, new FibonacciActionDefinition(), "/fibonacci");
     }
@@ -55,6 +66,7 @@ public class JRos1ActionClientIntegrationTests {
     public void clean() throws Exception {
         actionClient.close();
         client.close();
+        actionServer.destroyAllForcibly();
     }
 
     @Test

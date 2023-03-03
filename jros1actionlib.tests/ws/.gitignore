@@ -4,5 +4,5 @@
 **/logs
 **/log
 **/install
-.catkin_workspace
+**/.catkin_workspace
 src/CMakeLists.txt

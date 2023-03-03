@@ -54,7 +54,8 @@ public class JRos1ActionClient<G extends Message, R extends Message>
     private JRos1Client client;
 
     /**
-     * Creates a new instance of the client
+     * Creates a new instance of the client. Users should not call it directly but use {@link
+     * JRos1ActionClientFactory} instead.
      *
      * @param client ROS1 client
      * @param actionDefinition message type definitions for an action
