@@ -21,14 +21,18 @@ import id.jrosmessages.Message;
 import pinorobotics.jrosactionlib.msgs.ActionDefinition;
 
 /**
+ * {@inheritDoc}
+ *
  * @author aeon_flux aeon_flux@eclipso.ch
  */
 public interface Action1Definition<G extends Message, R extends Message>
         extends ActionDefinition<GoalIdMessage, G, R> {
 
+    /** {@inheritDoc} */
     @Override
     Class<? extends Action1GoalMessage<G>> getActionGoalMessage();
 
+    /** {@inheritDoc} */
     @Override
     Class<? extends Action1ResultMessage<R>> getActionResultMessage();
 }
