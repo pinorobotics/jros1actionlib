@@ -1,4 +1,3 @@
 // list of subprojects to publish to Sonatype repo
 
 include 'jros1actionlib'
-project(':jros1actionlib').projectDir = new File(rootDir, '../jros1actionlib')

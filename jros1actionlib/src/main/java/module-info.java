@@ -21,7 +21,8 @@
  *
  * <p>For usage examples see <a href="http://pinoweb.freetzi.com/jrosactionlib">Documentation</a>
  *
- * @see <a href="https://github.com/pinorobotics/jros1actionlib/releases">Download</a>
+ * @see <a
+ *     href="https://github.com/pinorobotics/jros1actionlib/blob/main/jros1actionlib/release/CHANGELOG.md">Releases</a>
  * @see <a href="https://github.com/pinorobotics/jros1actionlib">GitHub repository</a>
  * @author aeon_flux aeon_flux@eclipso.ch
  */
