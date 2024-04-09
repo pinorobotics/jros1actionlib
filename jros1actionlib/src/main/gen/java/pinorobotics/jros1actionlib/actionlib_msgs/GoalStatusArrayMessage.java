@@ -28,7 +28,10 @@ import java.util.Objects;
  * Definition for actionlib_msgs/GoalStatusArray Stores the statuses for goals that are currently
  * being tracked by an action server
  */
-@MessageMetadata(name = GoalStatusArrayMessage.NAME, md5sum = "12ef789174f5252c94b427cdb93b2d0a")
+@MessageMetadata(
+        name = GoalStatusArrayMessage.NAME,
+        fields = {"header", "status_list"},
+        md5sum = "12ef789174f5252c94b427cdb93b2d0a")
 public class GoalStatusArrayMessage implements Message {
 
     static final String NAME = "actionlib_msgs/GoalStatusArray";

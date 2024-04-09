@@ -31,6 +31,7 @@ import pinorobotics.jros1actionlib.actionlib_msgs.GoalStatusMessage;
  */
 @MessageMetadata(
         name = FibonacciActionResultMessage.NAME,
+        fields = {"header", "status", "result"},
         md5sum = "bee73a9fe29ae25e966e105f5553dd03",
         interfaceType = RosInterfaceType.ACTION)
 public class FibonacciActionResultMessage implements Action1ResultMessage<FibonacciResultMessage> {

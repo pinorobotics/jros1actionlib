@@ -26,7 +26,10 @@ import java.util.Objects;
 import pinorobotics.jrosactionlib.msgs.ActionGoalIdMessage;
 
 /** Definition for actionlib_msgs/GoalID */
-@MessageMetadata(name = GoalIdMessage.NAME, md5sum = "80cf13439fb52033034dd028f646e989")
+@MessageMetadata(
+        name = GoalIdMessage.NAME,
+        fields = {"stamp", "id"},
+        md5sum = "80cf13439fb52033034dd028f646e989")
 public class GoalIdMessage implements Message, ActionGoalIdMessage {
 
     static final String NAME = "actionlib_msgs/GoalID";

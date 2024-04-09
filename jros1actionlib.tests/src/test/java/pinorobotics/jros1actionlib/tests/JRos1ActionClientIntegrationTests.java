@@ -57,7 +57,7 @@ public class JRos1ActionClientIntegrationTests {
     public void setup() throws MalformedURLException {
         var exec = new XExec("ws/devel/lib/test_server/test_server_node");
         exec.getProcessBuilder().inheritIO();
-        actionServer = exec.start().forwardOutputAsync();
+        actionServer = exec.start().forwardOutputAsync(true);
         client = new JRos1ClientFactory().createClient("http://localhost:11311/");
         actionClient = factory.createClient(client, new FibonacciActionDefinition(), "/fibonacci");
     }

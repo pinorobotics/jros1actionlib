@@ -28,9 +28,8 @@ eclipse.classpath.file {
 }
 
 dependencies {
-  api 'io.github.lambdaprime:jros1client:6.0'
-  api 'io.github.lambdaprime:jros1messages:2.0'
-  api 'io.github.pinorobotics:jrosactionlib:2.0-SNAPSHOT'
+  api 'io.github.lambdaprime:jros1client:7.0'
+  api 'io.github.pinorobotics:jrosactionlib:3.0-SNAPSHOT'
 }
 
 jar {

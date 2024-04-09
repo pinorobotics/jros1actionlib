@@ -12,7 +12,6 @@ eclipse.classpath.file {
 
 dependencies {
   testImplementation project(':jros1actionlib')
-  testImplementation 'io.github.lambdaprime:jros1client:5.0'
 
   def junitVersion = "5.8.1"
   testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"

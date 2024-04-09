@@ -24,7 +24,10 @@ import id.xfunction.XJson;
 import java.util.Objects;
 
 /** Definition for actionlib_msgs/GoalStatus */
-@MessageMetadata(name = GoalStatusMessage.NAME, md5sum = "b6758985eced8e08e99ce12a55072791")
+@MessageMetadata(
+        name = GoalStatusMessage.NAME,
+        fields = {"goal_id", "status", "text"},
+        md5sum = "b6758985eced8e08e99ce12a55072791")
 public class GoalStatusMessage implements Message {
 
     static final String NAME = "actionlib_msgs/GoalStatus";
