@@ -1,6 +1,5 @@
 plugins {
   id 'com.diffplug.spotless'
-  id 'jacoco'
 }
 
 eclipse.classpath.file {
@@ -11,13 +10,22 @@ eclipse.classpath.file {
 }
 
 dependencies {
-  testImplementation project(':jros1actionlib')
+  testImplementation project(":${zzName}")
+  zzTestDependencies.split(',').findAll{ !it.isBlank() }.each { testImplementation it }
 
   def junitVersion = "5.8.1"
   testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
   testImplementation "org.junit.jupiter:junit-jupiter-params:${junitVersion}"
   testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
   testRuntimeOnly "org.junit.platform:junit-platform-commons:1.7.0"
+}
+
+sourceSets {
+  test {
+    java {
+      srcDirs += ["src/gen/java"]
+    }
+  }
 }
 
 java {
@@ -34,14 +42,6 @@ compileTestJava {
       '--module-path', classpath.asPath
     ]
     classpath = files()
-  }
-}
-
-sourceSets {
-  test {
-    java {
-      srcDirs += ["src/gen/java"]
-    }
   }
 }
 
